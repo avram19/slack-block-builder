@@ -1,0 +1,25 @@
+{
+  "name": "slack-block-builder",
+  "version": "0.0.1",
+  "description": "Typescript package for build slack blocks for messages, modal, app home and attachments. An implementation of slack's own block kit builder https://app.slack.com/block-kit-builder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/avram19/slack-block-builder.git"
+  },
+  "keywords": [
+    "slack",
+    "block-kit-builder",
+    "block",
+    "builder"
+  ],
+  "author": "Avinash Ramesha <aviram1906@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avram19/slack-block-builder/issues"
+  },
+  "homepage": "https://github.com/avram19/slack-block-builder#readme"
+}
