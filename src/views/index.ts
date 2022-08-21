@@ -15,6 +15,20 @@ class Views {
     this.composition = new Composition();
   }
 
+  /**
+   * Modal view for Slack App Surfaces
+   * @param title The title of the modal
+   * @param blocks The blocks to display in the modal
+   * @param close The close button text
+   * @param submit The submit button text
+   * @param private_metadata Any private metadata to send with the modal
+   * @param callback_id The callback id to send with the modal
+   * @param clear_on_close Whether to clear the modal when it is closed
+   * @param notify_on_close Whether to notify the service when the modal is closed
+   * @param external_id The external id to send with the modal
+   * @param submit_disabled Whether to disable the submit button
+   * @returns The modal view
+   */
   modal(
     title: string,
     blocks: (IActions | IContext | IDivider | IHeader | IImageBlock | IInput | ISection)[],
@@ -42,6 +56,13 @@ class Views {
     };
   }
 
+  /**
+   * Home tab view for Slack App Surfaces
+   * @param blocks The blocks to display in the home tab
+   * @param private_metadata Any private metadata to send with the home tab
+   * @param callback_id The callback id to send with the home tab
+   * @param external_id The external id to send with the home tab
+   */
   homeTab(
     blocks: (IActions | IContext | IDivider | IHeader | IImageBlock | IInput | ISection)[],
     private_metadata?: string,

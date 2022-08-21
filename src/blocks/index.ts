@@ -27,6 +27,10 @@ import IPublicChannelsMultiSelect from '../interfaces/elements/IPublicChannelsMu
 import IInput from '../interfaces/blocks/IInput';
 import ISection from '../interfaces/blocks/ISection';
 import Composition from '../composition';
+import IStaticSelectGroup from '../interfaces/elements/IStaticSelectGroup';
+import IExternalSelectGroup from '../interfaces/elements/IExternalSelectGroup';
+import IStaticMultiSelectGroup from '../interfaces/elements/IStaticMultiSelectGroup';
+import IExternalMultiSelectGroup from '../interfaces/elements/IExternalMultiSelectGroup';
 
 class Blocks {
   private readonly composition: Composition;
@@ -35,6 +39,11 @@ class Blocks {
     this.composition = new Composition();
   }
 
+  /**
+   * Actions section
+   * @param elements - array of elements
+   * @param block_id - block id
+   */
   actions(
     elements: [
       | IButton
@@ -43,7 +52,9 @@ class Blocks {
       | IOverflow
       | IRadioButtonGroup
       | IStaticSelect
+      | IStaticSelectGroup
       | IExternalSelect
+      | IExternalSelectGroup
       | IUserSelect
       | IConversationsSelect
       | IPublicChannelsSelect
@@ -54,22 +65,49 @@ class Blocks {
     return { type: 'actions', elements, block_id };
   }
 
+  /**
+   * Context section
+   * @param elements - array of elements
+   * @param block_id - block id
+   */
   context(elements: [IImage | IPlainText | IMarkdown], block_id?: string): IContext {
     return { type: 'context', elements, block_id };
   }
 
+  /**
+   * Divider section
+   * @param block_id - block id
+   */
   divider(block_id?: string): IDivider {
     return { type: 'divider', block_id };
   }
 
+  /**
+   * File section
+   * @param external_id - external id
+   * @param source - source ("remote" by default"
+   * @param block_id - block id
+   */
   file(external_id: string, source?: string, block_id?: string): IFile {
     return { type: 'file', external_id, source: source || 'remote', block_id };
   }
 
+  /**
+   * Header section
+   * @param text - text
+   * @param block_id - block id
+   */
   header(text: string, block_id?: string): IHeader {
     return { type: 'header', text: this.composition.plainText(text), block_id };
   }
 
+  /**
+   * Image section
+   * @param image_url - image url
+   * @param alt_text - alt text
+   * @param title - title
+   * @param block_id - block id
+   */
   image(image_url: string, alt_text: string, title?: string, block_id?: string): IImageBlock {
     return {
       type: 'image',
@@ -80,6 +118,15 @@ class Blocks {
     };
   }
 
+  /**
+   * Plain text input section
+   * @param label - label
+   * @param element - element
+   * @param _dispatch_action - dispatch action
+   * @param block_id - block id
+   * @param hint - hint
+   * @param optional - whether this input is optional
+   */
   input(
     label: string,
     element: [
@@ -87,9 +134,13 @@ class Blocks {
       | ICheckboxGroup
       | IRadioButtonGroup
       | IStaticSelect
+      | IStaticSelectGroup
       | IStaticMultiSelect
+      | IStaticMultiSelectGroup
       | IExternalSelect
+      | IExternalSelectGroup
       | IExternalMultiSelect
+      | IExternalMultiSelectGroup
       | IUserSelect
       | IUserMultiSelect
       | IConversationsSelect
@@ -115,6 +166,14 @@ class Blocks {
     };
   }
 
+  /**
+   * Section block
+   * @param text - text
+   * @param block_id - block id
+   * @param fields - fields
+   * @param accessory - accessory
+   * @param usePlainText - use plain text
+   */
   section(
     text?: string,
     block_id?: string,
@@ -127,9 +186,13 @@ class Blocks {
       | IImage
       | IRadioButtonGroup
       | IStaticSelect
+      | IStaticSelectGroup
       | IStaticMultiSelect
+      | IStaticMultiSelectGroup
       | IExternalSelect
+      | IExternalSelectGroup
       | IExternalMultiSelect
+      | IExternalMultiSelectGroup
       | IUserSelect
       | IUserMultiSelect
       | IConversationsSelect

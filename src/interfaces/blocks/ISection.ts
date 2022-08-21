@@ -17,6 +17,10 @@ import IUserMultiSelect from '../elements/IUserMultiSelect';
 import IConversationsMultiSelect from '../elements/IConversationsMultiSelect';
 import IPublicChannelsMultiSelect from '../elements/IPublicChannelsMultiSelect';
 import IImage from '../elements/IImage';
+import IStaticSelectGroup from '../elements/IStaticSelectGroup';
+import IStaticMultiSelectGroup from '../elements/IStaticMultiSelectGroup';
+import IExternalSelectGroup from '../elements/IExternalSelectGroup';
+import IExternalMultiSelectGroup from '../elements/IExternalMultiSelectGroup';
 
 export default interface ISection {
   type: 'section';
@@ -31,9 +35,13 @@ export default interface ISection {
     | IImage
     | IRadioButtonGroup
     | IStaticSelect
+    | IStaticSelectGroup
     | IStaticMultiSelect
+    | IStaticMultiSelectGroup
     | IExternalSelect
+    | IExternalSelectGroup
     | IExternalMultiSelect
+    | IExternalMultiSelectGroup
     | IUserSelect
     | IUserMultiSelect
     | IConversationsSelect

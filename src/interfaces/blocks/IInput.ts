@@ -14,6 +14,10 @@ import IPublicChannelsSelect from '../elements/IPublicChannelsSelect';
 import IPublicChannelsMultiSelect from '../elements/IPublicChannelsMultiSelect';
 import IDatePicker from '../elements/IDatePicker';
 import ITimePicker from '../elements/ITimePicker';
+import IStaticSelectGroup from '../elements/IStaticSelectGroup';
+import IStaticMultiSelectGroup from '../elements/IStaticMultiSelectGroup';
+import IExternalSelectGroup from '../elements/IExternalSelectGroup';
+import IExternalMultiSelectGroup from '../elements/IExternalMultiSelectGroup';
 
 export default interface IInput {
   type: 'input';
@@ -23,9 +27,13 @@ export default interface IInput {
     | ICheckboxGroup
     | IRadioButtonGroup
     | IStaticSelect
+    | IStaticSelectGroup
     | IStaticMultiSelect
+    | IStaticMultiSelectGroup
     | IExternalSelect
+    | IExternalSelectGroup
     | IExternalMultiSelect
+    | IExternalMultiSelectGroup
     | IUserSelect
     | IUserMultiSelect
     | IConversationsSelect

@@ -9,6 +9,8 @@ import IUserSelect from '../elements/IUserSelect';
 import IConversationsSelect from '../elements/IConversationsSelect';
 import IPublicChannelsSelect from '../elements/IPublicChannelsSelect';
 import ITimePicker from '../elements/ITimePicker';
+import IStaticSelectGroup from '../elements/IStaticSelectGroup';
+import IExternalSelectGroup from '../elements/IExternalSelectGroup';
 
 export default interface IActions {
   type: 'actions';
@@ -19,7 +21,9 @@ export default interface IActions {
     | IOverflow
     | IRadioButtonGroup
     | IStaticSelect
+    | IStaticSelectGroup
     | IExternalSelect
+    | IExternalSelectGroup
     | IUserSelect
     | IConversationsSelect
     | IPublicChannelsSelect
