@@ -1,6 +1,6 @@
 {
   "name": "@avkad17/slack-block-builder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typescript package for build slack blocks for messages, modal, app home and attachments. An implementation of slack's own block kit builder https://app.slack.com/block-kit-builder",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
