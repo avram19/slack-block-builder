@@ -45,7 +45,7 @@ class Blocks {
    * @param block_id - block id
    */
   actions(
-    elements: [
+    elements: (
       | IButton
       | ICheckboxGroup
       | IDatePicker
@@ -58,8 +58,8 @@ class Blocks {
       | IUserSelect
       | IConversationsSelect
       | IPublicChannelsSelect
-      | ITimePicker,
-    ],
+      | ITimePicker
+    )[],
     block_id?: string,
   ): IActions {
     return { type: 'actions', elements, block_id };
@@ -129,7 +129,7 @@ class Blocks {
    */
   input(
     label: string,
-    element: [
+    element:
       | IPlainTextInput
       | ICheckboxGroup
       | IRadioButtonGroup
@@ -149,7 +149,6 @@ class Blocks {
       | IPublicChannelsMultiSelect
       | IDatePicker
       | ITimePicker,
-    ],
     _dispatch_action?: boolean,
     block_id?: string,
     hint?: string,
