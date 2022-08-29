@@ -22,7 +22,7 @@ import IExternalMultiSelectGroup from '../elements/IExternalMultiSelectGroup';
 export default interface IInput {
   type: 'input';
   label: IPlainText;
-  element: (
+  element:
     | IPlainTextInput
     | ICheckboxGroup
     | IRadioButtonGroup
@@ -41,8 +41,7 @@ export default interface IInput {
     | IPublicChannelsSelect
     | IPublicChannelsMultiSelect
     | IDatePicker
-    | ITimePicker
-  )[];
+    | ITimePicker;
   dispatch_action?: boolean;
   block_id?: string;
   hint?: IPlainText;
