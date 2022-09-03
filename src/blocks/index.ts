@@ -70,7 +70,7 @@ class Blocks {
    * @param elements - array of elements
    * @param block_id - block id
    */
-  context(elements: [IImage | IPlainText | IMarkdown], block_id?: string): IContext {
+  context(elements: (IImage | IPlainText | IMarkdown)[], block_id?: string): IContext {
     return { type: 'context', elements, block_id };
   }
 
